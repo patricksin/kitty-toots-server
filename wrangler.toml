@@ -1,0 +1,21 @@
+name = "kitty-toots"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[[durable_objects.bindings]]
+name = "GARDEN"
+class_name = "Garden"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Garden"]
+
+[vars]
+# Put your Netlify address here once you know it, e.g. "https://kittytoots.netlify.app".
+# "*" lets any website use this server, which is fine for testing only.
+ALLOWED_ORIGINS = "*"
+# TURN_TTL = "14400"
+
+# Secrets (never put these in this file). Run:
+#   npx wrangler secret put TURN_KEY_ID
+#   npx wrangler secret put TURN_KEY_API_TOKEN
